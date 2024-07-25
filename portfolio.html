@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Personal Portfolio
+        </title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="portfolio.css">
+    </head>
+    <body>
+            <header>
+                <div class="home-content">
+                    <div class="name" id="name">
+                        Basa Samhith
+                    </div>
+                    <div class="menu" id="menu">
+                        <a href="#home" class="active">Home</a>
+                        <a href="about.html" target="_self">About</a>
+                        <a href="project.html">Project</a>
+                        <a href="skills.html">Skills</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main-up">
+                    <h1>Hi, I'm Basa Samhith</h1>
+                    <h3>Frontend Developer</h3>
+                    <p>Explore the world of tech with me, Basa Samhith, a dedicated B.Tech student. Discover my projects and insights as I push boundaries and turn ideas into reality. Join me on this journey of innovation and exploration!</p>
+                    <div class="btn">
+                        <button type="Submit" class="bu" onclick="openPopup()"><a href="#">Accept</a></button>
+                    </div>
+                    <div class="popup" id="popup">
+                        <img src="tick.jpeg">
+                        <h2>Thank You!</h2>
+                        <p>Thanks for hiring me.</p>
+                        <button type="button" onclick="closePopup()">Ok</button>
+                    </div>
+                </div>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/login/" target="_self"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://in.linkedin.com/company/twitter" target="_self"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/" target="_self"><i class='bx bxl-instagram'></i></a>
+                </div>
+                <span class="img-hover"></span>
+            </main> 
+            <script>
+                let popup = document.getElementById("popup");
+
+                function openPopup(){
+                    popup.classList.add("open-popup");
+                }
+                function closePopup(){
+                    popup.classList.remove("open-popup");
+                } 
+            </script>   
+    </body>
+</html>

@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #081b29;
+    color: white;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.skills{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+}
+
+.skills-name{
+    position: relative;
+    font-size: 25px;
+    color: #04fffb;
+    font-weight: 600;
+}
+
+.skills-name:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.skills-name::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s ;
+}
+
+.menu a{
+    padding-right: 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.menu a:hover,
+.menu a.active{
+    color: #00abf0;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: url(home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.my-skills{
+    width: 200px;
+}
+
+.my-skills h4{
+    position: relative;
+    width: 200px;
+    font-size: 30px;
+    font-weight: 500;
+    transition: 3s;
+}
+
+.my-skills::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s ;
+}
+
+.skills-container h3{
+    width: 100px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.skills-content{
+    width: 100px;
+    border: 3px solid #04fffb;
+    text-align: center;
+    padding: 5% 0;
+    font-size: 65px;
+    box-shadow: 0 0 15px #04fffb;
+    i 
+    {
+
+        color: #04fffb;
+    }
+    transition: 0.3s ease-in-out;
+}
+
+.skills-content:hover
+{
+   transform: scale(1.05) translateY(-20px);
+}
+
+.social-media{
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    align-items: center;
+    bottom: 40px;
+    width: 170px;
+}
+
+.social-media::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s ;
+    z-index: 2;
+}
+
+.social-media a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    color: #00abf0;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+
+.social-media a::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #00abf0;
+    transition: .5s;
+    z-index: -1;
+}
+
+.social-media a:hover::before{
+    width: 100%;
+}
+
+.social-media a:hover{
+    color: #081b29;
+}
+
+.img-hover{
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 600px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+}
+
+.img-hover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s ;
+    z-index: 100;
+}
+
+
+.img-hover:hover{
+    background: #081b29;
+    opacity: .8;
+}
+
+
+
+/*KEYFRAMES ANIMATIONS*/
+
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes manipActiveHover{
+    100%{
+        pointer-events: auto;
+    }
+}

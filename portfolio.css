@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    color: white;
+}
+
+header{
+    background: transparent;
+    color: white;
+}
+
+.home-content{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.menu a{
+    padding-right: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-weight: 500;
+    transition: .3s;
+}
+
+.menu a:hover,
+.menu a.active{
+    color: #00abf0;
+}
+
+#name{
+    position: relative;
+    font-size: 25px;
+    color: #04fffb;
+    font-weight: 600;
+}
+
+.name:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#name::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s ;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    background: url(home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.main-up{
+    max-width: 600px;
+}
+
+.main-up h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.main-up h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.main-up h3{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+
+.main-up h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.3s;
+}
+
+.main-up p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+
+.main-up p::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.6s;
+}
+
+.main-up .btn{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+
+.bu{
+    border: hidden;
+    background: transparent;
+}
+
+.popup{
+    width: 400px;
+    background: #081b29;
+    border-radius: 6px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: white;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+    z-index: 1000;
+}
+
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #00abf0;
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-up .btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 1.9s;
+    z-index: 2;
+}
+
+.btn a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.btn a:hover{
+    color: #00abf0;
+}
+
+.btn a::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+
+.btn a:hover::before{
+    width: 100%;
+}
+
+.social-media{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 40px;
+    width: 170px;
+}
+
+.social-media::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 2.5s;
+    z-index: 2;
+}
+
+.social-media a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    color: #00abf0;
+    text-decoration: none;
+    overflow: hidden;
+    transition: .5s;
+    z-index: 1;
+}
+
+.social-media a::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    transition: .5s;
+    z-index: -1;
+}
+
+.social-media a:hover::before{
+    width: 100%;  
+}
+
+.social-media a:hover{
+    color: #081b29;
+}
+
+.img-hover{
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 600px;
+    height: 100%;
+    background: transparent;
+    transition: 3s;
+    animation: manipActiveHover .1s forwards;
+    animation-delay: 4s;
+    pointer-events: none;
+}
+.img-hover::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b29;
+    animation: showRight 1s ease forwards;
+    animation-delay: 4s;
+    z-index: 100;
+}
+
+.img-hover:hover{
+    background: #081b29;
+    opacity: .8;
+}
+
+/*KEYFRAMES ANIMATIONS*/
+
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+
+@keyframes manipActiveHover{
+    100%{
+        pointer-events: auto;
+    }
+}
